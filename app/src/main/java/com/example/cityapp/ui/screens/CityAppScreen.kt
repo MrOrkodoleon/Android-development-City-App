@@ -2,7 +2,6 @@ package com.example.cityapp.ui.screens
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
@@ -20,7 +19,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.cityapp.R
-import com.example.cityapp.ui.*
 import com.example.cityapp.ui.navigation.CategoriesScreenDest
 import com.example.cityapp.ui.navigation.RecommendationDetailScreenDest
 import com.example.cityapp.ui.navigation.RecommendationsScreenDest
@@ -28,7 +26,7 @@ import com.example.cityapp.ui.viewmodel.CityViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CityApp(
+fun CityAppScreen(
     navController: NavHostController = rememberNavController(),
     cityViewModel: CityViewModel = hiltViewModel()
 ) {

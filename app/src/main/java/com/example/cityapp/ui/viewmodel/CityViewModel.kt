@@ -21,7 +21,6 @@ class CityViewModel @Inject constructor(private val cityDataRepository: CityData
     private val _selectedCategoryId = MutableStateFlow<Long?>(null)
     private val _selectedRecommendationId = MutableStateFlow<Long?>(null)
 
-    // Raw data flows
     private val _categoriesFlow: StateFlow<List<Category>> = cityDataRepository.getAllCategories()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000L), emptyList())
 
@@ -63,7 +62,7 @@ class CityViewModel @Inject constructor(private val cityDataRepository: CityData
                     currentRecommendations = currentRecommendations,
                     currentSelectedRecommendation = currentDetail,
                     selectedCategoryName = selectedCategory?.name,
-                    isShowingHomepage = catId == null // Homepage if no category is selected
+                    isShowingHomepage = catId == null
                 )
             }.collect { newState ->
                 _uiState.value = newState
