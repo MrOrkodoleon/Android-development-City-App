@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">City App</string>
+    <string name="address_label">Address: %s</string>
+    <string name="working_hours_label">Working Hours: %s</string>
+    <string name="categories_title">Categories</string>
+    <string name="recommendations_title">Recommendations</string>
+    <string name="content_description_back_button">Back</string>
 </resources>
